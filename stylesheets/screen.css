@@ -1,0 +1,82 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/*@import "compass/reset";*/
+/* line 20, ../sass/screen.scss */
+body {
+  background-color: #222;
+}
+/* line 22, ../sass/screen.scss */
+body section {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+/* line 30, ../sass/screen.scss */
+body div {
+  position: relative;
+  background-color: red;
+  height: 100px;
+  width: 100px;
+  background-color: #d50000;
+  transform: rotate(45deg);
+  box-shadow: 1px 1px 50px 0px rgba(0, 0, 0, 0.75);
+  animation-name: heart;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+/* line 41, ../sass/screen.scss */
+body div:before {
+  bottom: 0;
+  left: -50%;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  content: '';
+  border-radius: 50%;
+  background-color: #d50000;
+  animation-name: heartDeux;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+/* line 49, ../sass/screen.scss */
+body div:after {
+  top: -50%;
+  right: 0;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  content: '';
+  border-radius: 50%;
+  background-color: #d50000;
+}
+
+/* Animation Heart */
+@keyframes heart {
+  0%,
+    100% {
+    width: 1050x;
+    height: 100px;
+  }
+  20%,
+    40% {
+    width: 105px;
+    height: 105px;
+  }
+}
+@keyframes heartDeux {
+  0%,
+    100% {
+    width: 105px;
+    height: 105px;
+  }
+  20%,
+    40% {
+    width: 105px;
+    height: 105px;
+  }
+}
